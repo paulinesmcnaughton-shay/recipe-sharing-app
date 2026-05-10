@@ -33,22 +33,24 @@ export async function SiteHeader() {
       className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md"
       role="banner"
     >
-      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" className={logoClassName}>
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+        <Link href={isAuthenticated ? "/kitchen" : "/"} className={logoClassName}>
           GatherBites
         </Link>
         <div className="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-4">
-          <nav aria-label="Primary" className="min-w-0">
-            <ul className="flex list-none flex-wrap items-center justify-end gap-0.5 sm:gap-1">
-              {primaryLinks.map(({ href, label }) => (
-                <li key={href}>
-                  <Link href={href} className={linkClassName}>
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          {isAuthenticated && (
+            <nav aria-label="Primary" className="min-w-0">
+              <ul className="flex list-none flex-wrap items-center justify-end gap-0.5 sm:gap-1">
+                {primaryLinks.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className={linkClassName}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
           <AuthNav isAuthenticated={isAuthenticated} />
         </div>
       </div>

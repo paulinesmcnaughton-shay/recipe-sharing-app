@@ -46,7 +46,7 @@ export function AuthNav({ isAuthenticated }: AuthNavProps) {
   }
 
   return (
-    <div className="flex items-center gap-2 border-l border-border pl-4 sm:pl-6">
+    <div className="flex items-center gap-2">
       <nav aria-label="Account" className="flex items-center">
         {isAuthenticated ? (
           <button

@@ -5,7 +5,7 @@ export function SiteFooter() {
       role="contentinfo"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
-        <p>GatherBites — browse and share recipes</p>
+        <p>GatherBites — Browse and share recipes with your friends and family!</p>
       </div>
     </footer>
   )
