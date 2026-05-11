@@ -5,7 +5,9 @@ with AI-assisted tools.
 
 **Live app:** https://recipe-sharing-app-sigma-brown.vercel.app
 
-![GatherBites screenshot](public/screenshot.png)
+![Home](public/screenshot-home.png)
+![Browse recipes](public/screenshot-recipes.png)
+![Upload a recipe](public/screenshot-upload.png)
 
 ## About
 
